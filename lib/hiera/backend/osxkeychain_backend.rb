@@ -11,7 +11,9 @@ class Hiera
         end
 
         def lookup(options = {})
-          args = []
+          # See security(1) for these arguments.
+          args = ["-w"]
+
           if service
             args += ["-s", service]
           end

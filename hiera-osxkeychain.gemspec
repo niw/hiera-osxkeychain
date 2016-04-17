@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/niw/hiera-osxkeychain"
   spec.description = spec.summary = "Hiera backend for looking up OS X keychain"
 
-  spec.extra_rdoc_files = `git ls-files -- README*`.split($/)
+  spec.extra_rdoc_files = `git ls-files -- README* LICENSE`.split($/)
   spec.files = `git ls-files -- lib/*`.split($/) + spec.extra_rdoc_files
 
   spec.require_paths = ["lib"]

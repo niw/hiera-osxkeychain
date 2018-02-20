@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name = "hiera-osxkeychain"
-  spec.version = "0.1.0"
+  spec.version = "0.1.1"
   spec.authors = ["Yoshimasa Niwa"]
   spec.email = ["niw@niw.at"]
   spec.description = spec.summary = "Hiera backend for looking up OS X keychain"

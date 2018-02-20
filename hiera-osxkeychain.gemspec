@@ -6,8 +6,9 @@ Gem::Specification.new do |spec|
   spec.version = "0.1.0"
   spec.authors = ["Yoshimasa Niwa"]
   spec.email = ["niw@niw.at"]
-  spec.homepage = "https://github.com/niw/hiera-osxkeychain"
   spec.description = spec.summary = "Hiera backend for looking up OS X keychain"
+  spec.homepage = "https://github.com/niw/hiera-osxkeychain"
+  spec.license = "MIT"
 
   spec.extra_rdoc_files = `git ls-files -z -- README* LICENSE`.split("\x0")
   spec.files = `git ls-files -z -- lib/*`.split("\x0") + spec.extra_rdoc_files

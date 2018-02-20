@@ -60,9 +60,15 @@ class Hiera
             # This is for ruby prior to 1.9.1.
             set_close_on_exec
 
-            # Give `:close_others` option for ruby 1.9.x.
-            # This is by default on ruby 2.0.x and later.
-            exec(*(cmd + [{:close_others => true}]))
+            # Ruby prior to 1.9.0 exec doesn't take any options.
+            if RUBY_VERSION < "1.9.0"
+              exec(*cmd)
+            else
+              # Give `:close_others` option for ruby 1.9.x.
+              # This is by default on ruby 2.0.x and later.
+              args = cmd + [{:close_others => true}]
+              exec(*args)
+            end
           end
           stdout_write.close
           stderr_write.close
